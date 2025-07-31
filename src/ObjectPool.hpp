@@ -2,8 +2,6 @@
 #include <cstddef>
 #include <vector>
 
-#include "log.hpp"
-
 template<typename T>
 struct ObjectPool {
     std::vector<T*> pool;
@@ -28,11 +26,9 @@ struct ObjectPool {
 
     T* get_object() {
         if (pool.empty()) {
-            Log::debug("pool :: alloc");
             return new T();
         }
 
-        Log::debug("pool :: get");
         T* object = pool.back();
         pool.pop_back();
 
