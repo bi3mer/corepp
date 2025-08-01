@@ -9,4 +9,15 @@ namespace C {
                 p.y >= r.y &&
                 p.y <= r.y + r.height;
     }
+
+    inline bool point_in_circle(
+        const Vector2& p,
+        const Vector2& circle_position,
+        const float radius
+    ) {
+        return p.x >= circle_position.x - radius &&
+               p.x <= circle_position.x + radius &&
+               p.y >= circle_position.y - radius &&
+               p.y <= circle_position.y + radius;
+    }
 }
