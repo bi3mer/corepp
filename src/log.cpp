@@ -1,6 +1,7 @@
 #include <fstream>
 #include<iostream>
 
+namespace C {
 namespace Log {
     std::ofstream log_file("log.txt");
 
@@ -41,4 +42,5 @@ namespace Log {
         log_file.close();
         exit(1);
     }
+}
 }
