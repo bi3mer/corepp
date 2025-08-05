@@ -3,14 +3,15 @@
 #include "raylib.h"
 
 namespace C {
-    inline bool point_in_rectangle(const Vector2& p, const Rectangle& r) noexcept {
+namespace Point {
+    inline bool in_rectangle(const Vector2& p, const Rectangle& r) noexcept {
         return  p.x >= r.x &&
                 p.x <= r.x + r.width &&
                 p.y >= r.y &&
                 p.y <= r.y + r.height;
     }
 
-    inline bool point_in_circle(
+    inline bool in_circle(
         const Vector2& p,
         const Vector2& circle_position,
         const float radius
@@ -20,4 +21,5 @@ namespace C {
                p.y >= circle_position.y - radius &&
                p.y <= circle_position.y + radius;
     }
+}
 }
