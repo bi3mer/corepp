@@ -7,4 +7,9 @@ namespace C {
     inline T random_in_range_inclusive(T min, T max) noexcept {
         return ((static_cast<T>(rand()) % (max - min + 1)) + min);
     }
+
+    template <typename T>
+    inline float random_decimal() noexcept {
+        return static_cast<T>(rand()) / static_cast<T>(RAND_MAX);
+    }
 }
