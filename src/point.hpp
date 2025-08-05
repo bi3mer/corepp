@@ -2,6 +2,19 @@
 
 #include "raylib.h"
 
+// This is right now built around using raylib for convenience. At some point,
+// it may be a better idea to use a struct myself and then add some static_cast
+// calls around other code that uses raylib...
+//
+// struct Point {
+//     float x, y;
+
+//     Point() : x(0), y(0) {}
+//     Point(float x, float y) : x(x), y(y) {}
+
+//     // ...
+// };
+
 namespace C {
 namespace Point {
     inline bool in_rectangle(const Vector2& p, const Rectangle& r) noexcept {
