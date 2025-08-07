@@ -43,6 +43,7 @@ namespace Point {
 
     /// Randomly change the direction of a vector while maintaining the magnitude
     inline void random_direction_change(Vector2& p) {
+        // @TODO: is it faster to normalize and scale or to cos and sin?
         const float velocity_magnitude = C::Point::magnitude(p);
         const float new_angle = Random::decimal<float>() * 2.f * PI;
 
