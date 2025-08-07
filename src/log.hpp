@@ -8,7 +8,7 @@
 
 namespace C {
 namespace Log {
-    static std::ofstream log_file("log.txt");
+    inline std::ofstream log_file("log.txt");
 
     inline void init() {
         if (!log_file) {
