@@ -49,8 +49,8 @@ namespace Log {
     }
 
     template <typename ...Args>
-   inline void error(const char* str, Args&&... args) {
-       _log("ERROR :: ", str, std::forward<Args>(args)...);
+    inline void error(const char* str, Args&&... args) {
+        _log("ERROR :: ", str, std::forward<Args>(args)...);
     }
 
     template <typename ...Args>
